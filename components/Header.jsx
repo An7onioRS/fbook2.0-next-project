@@ -12,7 +12,6 @@ import userImg from '../assets/guy7.jpg'
 const Header = () => {
   return (
     <div className='flex p-4 items-center justify-between border-b lg:px-10'>
-        {/* Left part */}
         <div className='flex items-center mr-4'>
             <div className='w-10 h-12 cursor-pointer'>
                 <Image src={facebookImg} alt='facebook logo'/>
@@ -22,21 +21,19 @@ const Header = () => {
             </div> 
         </div>
 
-        {/* Central part */}
-        <div className='flex items-center space-x-7'>
+        <div className='flex flex-grow items-center justify-evenly'>
             <MdHome className='w-9 h-8 cursor-pointer'/>
             <FiFlag className='w-7 h-8 cursor-pointer' />
             <FiPlayCircle className='w-7 h-8 cursor-pointer' />
             <BsCart3 className='w-7 h-8 cursor-pointer' />
             <GrGroup className='w-7 h-8 cursor-pointer' />
         </div>
-
-        {/* Right part */}
+        
         <div className='flex items-center space-x-6 ml-4'>
             <div className='hidden md:flex items-center space-x-6'>
                 <GrAppsRounded className='w-7 h-8 cursor-pointer' />
-                <FaBell className='w-7 h-8 cursor-pointer' />
-                <AiOutlineMessage className='w-7 h-8 cursor-pointer' />
+                <FaBell className='w-7 h-7 cursor-pointer' />
+                <AiOutlineMessage className='w-7 h-10 cursor-pointer' />
             </div>
             <div className='sm:block w-10 h-10'>
                 <Image src={userImg} className='rounded-full cursor-pointer' alt='user image'/>

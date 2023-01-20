@@ -11,9 +11,8 @@ export default function Home() {
         <title>Facebook</title>
       </Head>
 
-      <Header />
-      <Feed />
-
+        <Header />
+        <Feed />
     </div>
   )
 }

@@ -1,16 +1,20 @@
 import React from 'react'
 import LeftSidebar from './LeftSidebar'
+import RightSidebar from './RightSidebar'
+import Stories from './Stories'
+import CreatePost from './CreatePost'
+import Posts from './Posts'
 
 const Feed = () => {
   return (
-    <div>
-    {/* Left side bar */}
-    <LeftSidebar />
-    {/* Stories */}
-    {/* Create post */}
-    {/* Posts */}
-    {/* Right side bar */}
-        
+    <div className='flex bg-[#f2f3f7] h-screen'>
+        <LeftSidebar />
+        <div className='flex flex-col mx-2 w-6/12 shadow-lg'>
+          <Stories />
+          <CreatePost />
+          <Posts />
+        </div>
+        <RightSidebar />
     </div>
   )
 }

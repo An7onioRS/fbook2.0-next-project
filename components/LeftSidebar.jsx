@@ -8,48 +8,46 @@ import { AiOutlineDesktop, AiFillClockCircle } from "react-icons/ai";
 
 const LeftSidebar = () => {
   return (
-    <div className='w-[10rem] hidden sm:block'>
-       <div className='flex flex-col pt-4 pl-7'>
-            <div className='flex items-center font-bold cursor-pointer'>
-                <MdHome className='w-9 h-9'/>
-                <p className='ml-2'>Home</p>
-            </div>
-
-            <div className='flex items-center mt-4 cursor-pointer'>
-                <div className='w-10 h-10'>
+    <div className='w-3/12 hidden sm:block'>
+       <div className='flex flex-col font-light'>
+            <div className='btn-leftsidebar my-4'>
+                <div className='w-12 h-10'>
                     <Image className='rounded-full' src={guy} alt='user image'/>
                 </div>
-                <p className='ml-2 font-bold'>Some Guy</p>
+                <h6 className='ml-2'>Joe Doe</h6>
             </div>
-            <div className='border-b my-4'></div>
-            <div className='space-y-6'>
-                <div className='flex items-center font-bold cursor-pointer'>
-                    <AiOutlineDesktop className='w-8 h-8' />
-                    <p className='ml-2'>Watch</p>
+            <div className='rounded-full btn-leftsidebar'>
+                <MdHome className='w-12 h-9'/>
+                <p className='ml-2'>Home</p>
+            </div>
+            <div className='space-y-6 my-4'>
+                <div className='btn-leftsidebar'>
+                    <AiOutlineDesktop className='w-12 h-8' />
+                    <h6 className='ml-2'>Watch</h6>
                 </div>
-                <div className='flex items-center font-bold cursor-pointer'>
-                    <BsPeopleFill className='w-8 h-8' />
-                    <p className='ml-2'>Friends</p>
+                <div className='btn-leftsidebar'>
+                    <BsPeopleFill className='w-12 h-8' />
+                    <h6 className='ml-2'>Friends</h6>
                 </div>
-                <div className='flex items-center font-bold cursor-pointer'>
-                    <MdGroups className='w-8 h-8' />
-                    <p className='ml-2'>Groups</p>
+                <div className='btn-leftsidebar'>
+                    <MdGroups className='w-12 h-8' />
+                    <h6 className='ml-2'>Groups</h6>
                 </div>
-                <div className='flex items-center font-bold cursor-pointer'>
-                    <BsCart3 className='w-8 h-8' />
-                    <p className='ml-2'>Marketplace</p>
+                <div className='btn-leftsidebar'>
+                    <BsCart3 className='w-12 h-8' />
+                    <h6 classNam    e='ml-2'>Marketplace</h6>
                 </div>
-                <div className='flex items-center font-bold cursor-pointer'>
-                    <BsCalendar2Fill className='w-7 h-7' />
-                    <p className='ml-2'>Events</p>
+                <div className='btn-leftsidebar'>
+                    <BsCalendar2Fill className='w-12 h-7' />
+                    <h6 className='ml-2'>Events</h6>
                 </div>
-                <div className='flex items-center font-bold cursor-pointer'>
-                    <AiFillClockCircle className='w-8 h-8' />
-                    <p className='ml-2'>Memories</p>
+                <div className='btn-leftsidebar'>
+                    <AiFillClockCircle className='w-12 h-8' />
+                    <h6 className='ml-2'>Memories</h6>
                 </div>
-                <div className='flex items-center cursor-pointer'>
-                    <RiArrowDownSLine className='w-8 h-8' />
-                    <p className='ml-2'>See more</p>
+                <div className='btn-leftsidebar'>
+                    <RiArrowDownSLine className='w-12 file:h-8' />
+                    <h6 className='ml-2'>See more</h6>
                 </div>
             </div>
        </div>
