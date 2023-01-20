@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import guy from "../assets/guy7.jpg";
 import dots from "../assets/dots.png";
@@ -13,20 +14,22 @@ import { BiWorld } from "react-icons/bi";
 import { AiOutlineClose } from 'react-icons/ai'
 import Image from "next/image";
 import { useSession } from 'next-auth/react';
+import Moment from 'react-moment';
 
-const Post = () => {
+const Post = ({ id, username, userImg, caption, timestamp }) => {
     const { data: session } = useSession()
+
   return (
     <div className='bg-[#ffffff] p-4 mt-4'>
         <div>
             <div className='flex justify-between items-center'>
                 <div className='flex gap-2 cursor-pointer'>
                     <div>
-                        <img className='w-10 h-10 rounded-full' src={session?.user?.image} alt='profile pic'/>
+                        <img className='w-10 h-10 rounded-full' src={userImg} alt='profile pic'/>
                     </div>
                     <div>
-                        <h3 className='6t-bold'>{session?.user?.name}</h3>
-                        <p className='text-xs'>5 hours ago &#8226; <BiWorld className='inline' /></p>
+                        <h3 className='6t-bold'>{username}</h3>
+                        <p className='text-xs'><Moment fromNow>{timestamp?.toDate()}</Moment> &#8226; <BiWorld className='inline' /></p>
                     </div>
                 </div>
                 <div className='flex flex-grow justify-end text-state-500'>
@@ -37,7 +40,7 @@ const Post = () => {
                 </div>
             </div>
             <div className='my-3'>
-                <p>Take a look at my brand new car!</p>
+                <p>{caption}</p>
                 <div>
                     <Image src={car} alt='car' className='mt-3 -mx-4'/>
                 </div>
