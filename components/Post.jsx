@@ -12,18 +12,20 @@ import { AiOutlineCamera, AiOutlineGif } from "react-icons/ai";
 import { BiWorld } from "react-icons/bi";
 import { AiOutlineClose } from 'react-icons/ai'
 import Image from "next/image";
+import { useSession } from 'next-auth/react';
 
 const Post = () => {
+    const { data: session } = useSession()
   return (
     <div className='bg-[#ffffff] p-4 mt-4'>
         <div>
             <div className='flex justify-between items-center'>
                 <div className='flex gap-2 cursor-pointer'>
                     <div>
-                        <Image className='w-10 h-10 rounded-full' src={guy} alt='profile pic'/>
+                        <img className='w-10 h-10 rounded-full' src={session?.user?.image} alt='profile pic'/>
                     </div>
                     <div>
-                        <h3 className='6t-bold'>Joe Doe</h3>
+                        <h3 className='6t-bold'>{session?.user?.name}</h3>
                         <p className='text-xs'>5 hours ago &#8226; <BiWorld className='inline' /></p>
                     </div>
                 </div>

@@ -8,8 +8,12 @@ import { GrGroup, GrAppsRounded } from "react-icons/gr";
 import { FaBell } from "react-icons/fa";
 import { AiOutlineMessage } from "react-icons/ai";
 import userImg from '../assets/guy7.jpg'
+import { useSession, signIn, signOut } from "next-auth/react"
 
 const Header = () => {
+    const { data: session } = useSession()
+    console.log(session)
+    
   return (
         <div className='flex p-2 items-center justify-between border-b sticky top-0 z-30 w-full bg-white'>
             <div className='flex items-center'>
@@ -36,11 +40,11 @@ const Header = () => {
                     <AiOutlineMessage className='w-7 h-10 cursor-pointer' />
                 </div>
                 <div className='sm:block w-10 h-10'>
-                    <Image src={userImg} className='rounded-full cursor-pointer' alt='user image'/>
+                    <img src={session?.user?.image} className='rounded-full cursor-pointer' alt='user image'/>
                 </div>
             </div>
     </div>
   )
-}
+}   
 
 export default Header

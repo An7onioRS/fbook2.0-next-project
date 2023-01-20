@@ -5,16 +5,19 @@ import { MdHome, MdGroups } from "react-icons/md";
 import { BsCart3, BsPeopleFill, BsCalendar2Fill } from "react-icons/bs";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { AiOutlineDesktop, AiFillClockCircle } from "react-icons/ai";
+import { useSession } from 'next-auth/react';
 
 const LeftSidebar = () => {
+    const { data: session } = useSession()
+    console.log(session)
   return (
     <div className='w-3/12 hidden lg:block relative'>
        <div className='flex flex-col font-light fixed'>
             <div className='btn-leftsidebar my-4'>
                 <div className='w-12 h-10'>
-                    <Image className='rounded-full' src={guy} alt='user image'/>
+                    <img className='rounded-full' src={session?.user?.image} alt='user image'/>
                 </div>
-                <h6 className='ml-2'>Joe Doe</h6>
+                <h6 className='ml-2'>{session?.user?.name}</h6>
             </div>
             <div className='rounded-full btn-leftsidebar'>
                 <MdHome className='w-12 h-9'/>
