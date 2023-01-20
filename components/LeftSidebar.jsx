@@ -8,7 +8,7 @@ import { AiOutlineDesktop, AiFillClockCircle } from "react-icons/ai";
 
 const LeftSidebar = () => {
   return (
-    <div className='w-3/12 hidden sm:block relative'>
+    <div className='w-3/12 hidden lg:block relative'>
        <div className='flex flex-col font-light fixed'>
             <div className='btn-leftsidebar my-4'>
                 <div className='w-12 h-10'>

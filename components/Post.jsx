@@ -58,18 +58,18 @@ const Post = () => {
                 <BiLike className='w-6 h-6'/>
                 <p className='ml-1'>Like</p>
             </div>
-            <div className='flex-1 flex justify-center items-center cursor-pointe hover:bg-gray-100 p-4 rounded-lg'>
-                <FaRegCommentAlt className='w-6 h-5'/>
+            <div className='flex-1 flex justify-center items-center cursor-pointer hover:bg-gray-100 p-4 rounded-lg'>
+                <FaRegCommentAlt className='w-6 h-5 cursor-pointer'/>
                 <p className='ml-1'>Comment</p>
             </div>
-            <div className='flex-1 flex justify-center items-center cursor-pointe hover:bg-gray-100 p-4 rounded-lg'>
+            <div className='flex-1 flex justify-center items-center cursor-pointer hover:bg-gray-100 p-4 rounded-lg'>
                 <Image src={share} alt='share' className='w-6 h-5'/>
                 <p className='ml-1'>Share</p>
             </div>
         </div>
         <div className='max-h-40 overflow-y-auto'>
             <div className='flex justify-between items-center mt-2'>
-                <p className='flex-1'>See 26 comments</p>
+                <p className='flex-1 cursor-pointer'>See 26 comments</p>
                 <div className='flex justify-center items-center gap-1'>
                     <p>Most Relevant</p>
                     <RiArrowDownSLine />
@@ -83,8 +83,8 @@ const Post = () => {
             <p>A beast of a car man!</p>
             </div>
             <div className='ml-12 text-gray-800 flex gap-2 items-center'>
-                <h6>Like</h6>
-                <h6>Reply</h6>
+                <h6 className='cursor-pointer'>Like</h6>
+                <h6 className='cursor-pointer'>Reply</h6>
                 <h6>46 minutes ago</h6>
             </div>
             <div className='flex gap-2 items-center mt-2'>
@@ -95,8 +95,8 @@ const Post = () => {
                 <p>Insane!</p>
             </div>
             <div className='ml-12 text-gray-800 flex gap-2 items-center'>
-                <h6>Like</h6>
-                <h6>Reply</h6>
+                <h6 className='cursor-pointer'>Like</h6>
+                <h6 className='cursor-pointer'>Reply</h6>
                 <h6>14 minutes ago</h6>
             </div>
             <div className='mt-4 flex items-center gap-2'>
@@ -106,9 +106,9 @@ const Post = () => {
                 <div className='flex justify-between items-center flex-grow text-gray-500'>
                     <input type="text" placeholder='Write a comment...' className='outline-0'/>
                     <div className='flex items-center gap-1'>
-                        <AiOutlineCamera />
-                        <AiOutlineGif />
-                        <BiSmile />
+                        <AiOutlineCamera className='cursor-pointer' />
+                        <AiOutlineGif className='cursor-pointer'/>
+                        <BiSmile className='cursor-pointer'/>
                     </div>
                 </div>
             </div>

@@ -59,7 +59,7 @@ const RightSidebar = () => {
 
   return (
     <div className="relative">
-        <div className='hidden sm:flex flex-col gap-4 my-4 px-7 py-2 flex-1 fixed'>
+        <div className='hidden lg:flex flex-col gap-4 my-4 px-7 py-2 flex-1 fixed'>
         <h1 className='w-2/12 hidden sm:block text-gray-500 font-bold'>Birthdays</h1>
         <div className='flex items-center gap-1'>
             <AiFillGift className='h-8 w-8'/>
@@ -69,18 +69,19 @@ const RightSidebar = () => {
             <div className='flex justify-between items-center'>
                 <h1 className='w-2/12 hidden sm:block text-gray-500 font-bold'>Contacts</h1>
                 <div className='flex gap-2 items-center'>
-                    <BsFillCameraVideoFill />
-                    <FiSearch />
-                    <div>
+                    <BsFillCameraVideoFill className='cursor-pointer' />
+                    <FiSearch className='cursor-pointer' />
+                    <div className='cursor-pointer'>
                         <Image src={dots} alt='dots' className='w-6 h-6'/>
                     </div>
                 </div>
             </div>
             {
                 contacts.map(contact => (
-                    <div key={contact.name} className='flex items-center gap-2'>
-                        <div className='w-10 h-10'>
+                    <div key={contact.name} className='flex items-center gap-2 cursor-pointer'>
+                        <div className=' relative w-10 h-10'>
                             <Image className='rounded-full h-full' src={contact.profilePic} alt='albert'/>
+                            <div className='w-3 h-3 absolute bg-green-500 bottom-0 right-1 rounded-full p-1 border border-white border-3'></div>
                         </div>
                         <p>{contact.name}</p>
                     </div>

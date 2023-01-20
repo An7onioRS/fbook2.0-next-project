@@ -21,7 +21,7 @@ const Header = () => {
                 </div> 
             </div>
 
-            <div className='flex flex-grow items-center justify-evenly'>
+            <div className='hidden lg:flex flex-grow items-center justify-evenly'>
                 <MdHome className='w-9 h-8 cursor-pointer'/>
                 <FiFlag className='w-7 h-8 cursor-pointer' />
                 <FiPlayCircle className='w-7 h-8 cursor-pointer' />
@@ -30,7 +30,7 @@ const Header = () => {
             </div>
         
             <div className='flex items-center space-x-6 ml-4'>
-                <div className='hidden md:flex items-center space-x-6'>
+                <div className='hidden lg:flex items-center space-x-6'>
                     <GrAppsRounded className='w-7 h-8 cursor-pointer' />
                     <FaBell className='w-7 h-7 cursor-pointer' />
                     <AiOutlineMessage className='w-7 h-10 cursor-pointer' />
