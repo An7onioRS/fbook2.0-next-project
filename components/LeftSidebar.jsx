@@ -8,8 +8,8 @@ import { AiOutlineDesktop, AiFillClockCircle } from "react-icons/ai";
 
 const LeftSidebar = () => {
   return (
-    <div className='w-3/12 hidden sm:block'>
-       <div className='flex flex-col font-light'>
+    <div className='w-3/12 hidden sm:block relative'>
+       <div className='flex flex-col font-light fixed'>
             <div className='btn-leftsidebar my-4'>
                 <div className='w-12 h-10'>
                     <Image className='rounded-full' src={guy} alt='user image'/>
@@ -35,7 +35,7 @@ const LeftSidebar = () => {
                 </div>
                 <div className='btn-leftsidebar'>
                     <BsCart3 className='w-12 h-8' />
-                    <h6 classNam    e='ml-2'>Marketplace</h6>
+                    <h6 className='ml-2'>Marketplace</h6>
                 </div>
                 <div className='btn-leftsidebar'>
                     <BsCalendar2Fill className='w-12 h-7' />

@@ -7,9 +7,9 @@ import Posts from './Posts'
 
 const Feed = () => {
   return (
-    <div className='flex bg-[#f2f3f7] h-screen'>
-        <LeftSidebar />
-        <div className='flex flex-col mx-2 w-6/12 shadow-lg'>
+    <div className='flex bg-[#f2f3f7] bg-scroll'>
+        <LeftSidebar /> 
+        <div className='flex flex-col mx-2 lg:w-6/12 shadow-lg overflow-'>
           <Stories />
           <CreatePost />
           <Posts />
