@@ -29,7 +29,7 @@ const Post = () => {
                 </div>
                 <div className='flex flex-grow justify-end text-state-500'>
                     <div className='w-8 h-8 cursor-pointer'>
-                        <Image src={dots} alt='dots' lassName='w-8 h-8'/>
+                        <Image src={dots} alt='dots' className='w-8 h-8'/>
                     </div>
                         <AiOutlineClose className='w-6 h-8 cursor-pointer'/>
                 </div>
