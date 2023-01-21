@@ -11,14 +11,14 @@ const LeftSidebar = () => {
     const { data: session } = useSession()
   return (
     <div className='w-3/12 hidden lg:block relative'>
-       <div className='flex flex-col font-light fixed'>
+       <div className='flex w-3/12 flex-col font-light fixed'>
             <div className='btn-leftsidebar my-4'>
                 <div className='w-12 h-10'>
                     <img className='rounded-full' src={session?.user?.image} alt='user image'/>
                 </div>
                 <h6 className='ml-2'>{session?.user?.name}</h6>
             </div>
-            <div className='rounded-full btn-leftsidebar'>
+            <div className='btn-leftsidebar'>
                 <MdHome className='w-12 h-9'/>
                 <p className='ml-2'>Home</p>
             </div>
