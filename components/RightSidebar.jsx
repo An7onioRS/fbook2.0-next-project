@@ -63,7 +63,7 @@ const RightSidebar = () => {
         <h1 className='w-2/12 hidden sm:block text-gray-500 font-bold'>Birthdays</h1>
         <div className='flex items-center gap-1'>
             <AiFillGift className='h-8 w-8'/>
-            <p className='text-sm'><Link href='#' className='font-bold'>Margaret Deen's</Link> birthday is today.</p>
+            <p className='text-sm'><Link href='#' className='font-bold'>Margaret Deens</Link> birthday is today.</p>
         </div>
         <div className='border-b-2 border-gray-300'></div>
             <div className='flex justify-between items-center'>
